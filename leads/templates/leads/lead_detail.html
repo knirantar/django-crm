@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    <a href = "{% url 'leads:home' %}">Go back to leads</a>
+    <h1>This is details of {{lead.first_name}}</h1>
+    <p>This person age : {{lead.age}}</p>
+    <a href = "{% url 'leads:lead-update' lead.pk %}">Update<a>
+    <a href = "{% url 'leads:lead-delete' lead.pk %}">Delete<a>
+{% endblock content %}
